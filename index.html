@@ -33,9 +33,43 @@
         <li><a href="">Login</a></li>
         <li class="btn with-bg"><a href="">Sign Up</a></li>
       </ul>
+      <ul class="show-on-mobile">
+        <li class="bugger mr-0"><img src="images/icon-hamburger.svg" alt=""></li>
+        <li class="close hidden"><img src="images/icon-close.svg" alt=""></li>
+      </ul>
+      <div class="menu">
+
+      </div>
     </div>
   </header>
+
+  <div class="banner-content container">
+    <div class="title">A mordern publishing platform</div>
+    <div class="caption">Grow your audience and build your online brand</div>
+    <div class="button-wrap">
+      <button class="btn with-bg">Start for Free</button>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $('document').ready(() => {
+   $('.bugger').click(() => {
+    $('.menu').toggle();
+    $('.bugger').toggleClass('hidden')
+    $('.close').toggleClass('hidden')
+   })
+   $('.close').click(() => {
+    $('.menu').toggle();
+    $('.close').toggleClass('hidden')
+    $('.bugger').toggleClass('hidden')
+   })
+  })
+</script>
 
 </body>
 </html>
