@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+}
+
+.container {
+  padding: 0 10rem;
+}
+@media (max-width: 991px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  border: 1px solid;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.btn.with-bg {
+  color: #f05664;
+  background-color: white;
+  border-color: white;
+}
+
+.hide-on-mobile {
+  display: block;
+}
+@media (max-width: 991px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.banner {
+  height: 55vh;
+  width: 100%;
+  border-radius: 0 0 0 100px;
+  background: #ff7e66;
+  background-image: url("../images/bg-pattern-intro-desktop.svg");
+  background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(to right top, #ff8f70, #ff7e66, #ff6c5e, #ff5758, #ff3d54);
+  background-repeat: no-repeat;
+  background-size: 212%;
+  background-position: 24% 52%;
+}
+@media (max-width: 991px) {
+  .banner {
+    height: 75vh;
+    background-size: 310%;
+    background-position: 33% 35%;
+    background-image: url("../images/bg-pattern-intro-mobile.svg");
+    background-image: url("../images/bg-pattern-intro-mobile.svg"), linear-gradient(to right top, #ff8f70, #ff7e66, #ff6c5e, #ff5758, #ff3d54);
+  }
+}
+.banner header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 3rem;
+}
+.banner header .left-section {
+  display: flex;
+  align-items: center;
+}
+.banner header .left-section .logo {
+  font-size: 3rem;
+  margin-right: 7rem;
+  color: white;
+}
+.banner header .right-section {
+  display: flex;
+  align-items: center;
+}
+.banner header ul {
+  margin: 0;
+  padding: 0;
+}
+.banner header ul li {
+  display: inline-block;
+  color: white;
+  margin-right: 1rem;
+}
+.banner header ul li:last-child {
+  margin-right: 0;
+}/*# sourceMappingURL=style.css.map */
