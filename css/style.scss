@@ -1,23 +1,42 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Overpass', sans-serif;
     font-size: 16px;
 }
 
-.container{
+$LightRed_CTAtext: hsl(356, 100%, 66%);
+$VeryLightRed_CTA_hover_background: hsl(355, 100%, 74%);
+$VeryDarkBlue_headings: hsl(208, 49%, 24%);
+
+
+$White_text: hsl(0, 0%, 100%);
+$GrayishBlue_footer_text: hsl(240, 2%, 79%);
+$VeryDarkGrayishBlue_body_copy: hsl(207, 13%, 34%);
+$VeryDarkBlackBlue_footer_background: hsl(240, 10%, 16%);
+
+$VeryLightRed: hsl(13, 100%, 72%);
+$LightRed: hsl(353, 100%, 62%);
+
+
+$VeryDarkGrayBlue: hsl(237, 17%, 21%);
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+
+.container {
     padding: 0 10rem;
+
     @media (max-width: 991px) {
         padding: 0 3rem;
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-.btn{
+.btn {
     border: 1px solid;
     padding: 15px 40px;
     border-radius: 30px;
@@ -25,19 +44,23 @@ a{
     border-color: #fff;
     background: transparent;
     color: #fff;
+
     @media (max-width: 991px) {
         padding: 13px 20px;
     }
-    &:hover{
+
+    &:hover {
         color: #f05664;
         background-color: white;
         border-color: white;
     }
-    &.with-bg{
+
+    &.with-bg {
         color: #f05664;
         background-color: white;
         border-color: white;
-        &:hover{
+
+        &:hover {
             background-color: rgba(255, 255, 255, 0.3);
             border-color: transparent;
             color: #fff;
@@ -45,26 +68,28 @@ a{
     }
 }
 
-.hidden{
-    display: none!important;
+.hidden {
+    display: none !important;
 }
 
-.hide-on-mobile{
+.hide-on-mobile {
     display: block;
+
     @media (max-width: 991px) {
         display: none;
     }
 }
 
-.show-on-mobile{
+.show-on-mobile {
     display: none;
+
     @media (max-width: 991px) {
         display: block;
     }
 }
 
-.banner{
-    height: 55vh;
+.banner {
+    height: 70vh;
     width: 100%;
     border-radius: 0 0 0 100px;
     background: #ff7e66;
@@ -73,50 +98,58 @@ a{
     background-repeat: no-repeat;
     background-size: 212%;
     background-position: 24% 52%;
+
     @media (max-width: 991px) {
-        height: 55vh;
+        height: 70vh;
         background-size: 310%;
-        background-position: 33% 35%;    
+        background-position: 33% 35%;
         background-image: url('../images/bg-pattern-intro-mobile.svg');
         background-image: url('../images/bg-pattern-intro-mobile.svg'), linear-gradient(to right top, #ff8f70, #ff7e66, #ff6c5e, #ff5758, #ff3d54);
     }
 
-    header{
+    header {
         display: flex;
         justify-content: space-between;
         font-family: 'Ubuntu', sans-serif;
         padding-top: 3rem;
         position: relative;
-        .left-section{
+
+        .left-section {
             display: flex;
             align-items: center;
-            .logo{
+
+            .logo {
                 font-size: 3rem;
                 margin-right: 7rem;
                 color: white;
             }
         }
-        .right-section{
+
+        .right-section {
             display: flex;
             align-items: center;
         }
-        ul{
+
+        ul {
             margin: 0;
             padding: 0;
-            
-            li{
+
+            li {
                 display: inline-block;
                 color: white;
                 margin-right: 3rem;
-                &:last-child{
+
+                &:last-child {
                     margin-right: 0
                 }
-                &.mr-0{
+
+                &.mr-0 {
                     margin-right: 0;
                 }
             }
         }
-        .menu{
+
+        .menu {
             background-color: white;
             display: none;
             width: 80%;
@@ -130,31 +163,134 @@ a{
         }
     }
 
-    .banner-content{
+    .banner-content {
         text-align: center;
-        margin-top: 7rem;
+        margin-top: 5rem;
         color: #fff;
+
         @media (max-width: 991px) {
-            margin-top: 5rem;  
+            margin-top: 5rem;
         }
-        .title{
+
+        .title {
             font-size: 3rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+
             @media (max-width: 991px) {
                 font-size: 2rem;
             }
         }
-        .caption{
+
+        .caption {
             color: #fee5df;
-            margin-bottom: 3rem;
+            margin: 3rem 0 3rem 0;
         }
-        .button-wrap{
+
+        .button-wrap {
             display: flex;
             justify-content: center;
             gap: 2rem;
         }
     }
-
 }
 
+.theFuture {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+    .heading {
+        color: $VeryDarkGrayBlue;
+        font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    .sections {
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        position: relative;
+
+        .heading {
+            margin: 0;
+        }
+
+        .body {
+            color: $VeryDarkGrayishBlue_body_copy;
+            font-weight: 500;
+            line-height: 1.7rem;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 991px) {
+            display: grid;
+            grid-template-columns: 1.8fr 1.2fr;
+
+            .heading {
+                font-size: 1.4rem;
+                padding-left: 10rem;
+            }
+
+            .body {
+                color: $VeryDarkGrayishBlue_body_copy;
+                font-weight: 500;
+                line-height: 1.2rem;
+                padding-left: 10rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .editor-img {
+
+            background-image: url(../images/illustration-editor-mobile.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 270px;
+            width: 100%;
+            margin-bottom: 3rem;
+
+            @media (min-width: 991px) {
+                background-image: url(../images/illustration-editor-desktop.svg);
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 450px;
+                margin-bottom: 3rem;
+                grid-column: 2/-1;
+            }
+
+        }
+
+        .desc {
+
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            height: 500px;
+
+            @media (min-width: 991px) {
+                text-align: left;
+                grid-column: 1/1;
+                grid-row: 1/-1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 450px;
+                padding: 0;
+            }
+
+
+            .info {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

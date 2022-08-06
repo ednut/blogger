@@ -72,7 +72,7 @@ a {
 }
 
 .banner {
-  height: 55vh;
+  height: 70vh;
   width: 100%;
   border-radius: 0 0 0 100px;
   background: #ff7e66;
@@ -84,7 +84,7 @@ a {
 }
 @media (max-width: 991px) {
   .banner {
-    height: 55vh;
+    height: 70vh;
     background-size: 310%;
     background-position: 33% 35%;
     background-image: url("../images/bg-pattern-intro-mobile.svg");
@@ -140,7 +140,7 @@ a {
 }
 .banner .banner-content {
   text-align: center;
-  margin-top: 7rem;
+  margin-top: 5rem;
   color: #fff;
 }
 @media (max-width: 991px) {
@@ -160,10 +160,97 @@ a {
 }
 .banner .banner-content .caption {
   color: #fee5df;
-  margin-bottom: 3rem;
+  margin: 3rem 0 3rem 0;
 }
 .banner .banner-content .button-wrap {
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
+
+.theFuture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.theFuture .heading {
+  color: hsl(237deg, 17%, 21%);
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  margin: 3rem 0;
+  width: 100%;
+}
+.theFuture .sections {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: relative;
+}
+.theFuture .sections .heading {
+  margin: 0;
+}
+.theFuture .sections .body {
+  color: hsl(207deg, 13%, 34%);
+  font-weight: 500;
+  line-height: 1.7rem;
+  margin-bottom: 0;
+}
+@media (min-width: 991px) {
+  .theFuture .sections {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+  }
+  .theFuture .sections .heading {
+    font-size: 1.4rem;
+    padding-left: 10rem;
+  }
+  .theFuture .sections .body {
+    color: hsl(207deg, 13%, 34%);
+    font-weight: 500;
+    line-height: 1.2rem;
+    padding-left: 10rem;
+    margin-bottom: 0;
+  }
+}
+.theFuture .sections .editor-img {
+  background-image: url(../images/illustration-editor-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 270px;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+@media (min-width: 991px) {
+  .theFuture .sections .editor-img {
+    background-image: url(../images/illustration-editor-desktop.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 450px;
+    margin-bottom: 3rem;
+    grid-column: 2/-1;
+  }
+}
+.theFuture .sections .desc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+}
+@media (min-width: 991px) {
+  .theFuture .sections .desc {
+    text-align: left;
+    grid-column: 1/1;
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+    padding: 0;
+  }
+}
+.theFuture .sections .desc .info {
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=style.css.map */
