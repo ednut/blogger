@@ -208,6 +208,18 @@ a {
   top: -60px;
   right: -24rem;
 }
+@media (max-width: 991px) {
+  .theFuture .sections .img-wrap {
+    height: 100%;
+    width: 100%;
+  }
+  .theFuture .sections .img-wrap img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 80px;
+  }
+}
 .theFuture .sections .desc {
   width: 60%;
 }
@@ -219,4 +231,24 @@ a {
 }
 .theFuture .sections .desc .info {
   margin-bottom: 3rem;
+}
+@media (max-width: 991px) {
+  .theFuture .sections .desc {
+    width: 100%;
+  }
+  .theFuture .sections .desc p {
+    padding-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .theFuture .sections {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .theFuture .sections .heading {
+    text-align: center;
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
