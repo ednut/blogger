@@ -417,4 +417,86 @@ a {
 
         }
     }
+
+    .tooling {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+        min-height: 100vh;
+
+        .laptop {
+            background-image: url(../images/illustration-laptop-mobile.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 270px;
+            max-width: 600px;
+            min-width: 280px;
+            margin: 70px 0 40px 0;
+            margin-inline: auto;
+        }
+
+        .desc {
+            height: 600px;
+
+            .body {
+                color: $VeryDarkGrayishBlue_body_copy;
+                font-weight: 500;
+                line-height: 1.7rem;
+                margin-bottom: 0;
+            }
+
+            .heading {
+                color: $VeryDarkGrayBlue;
+                font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+                margin: 3rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (min-width:820px) {
+            display: flex;
+            flex-direction: row;
+            padding: 30px 0;
+
+            .container {
+                padding: 0 7rem;
+            }
+
+            .laptop {
+                background-image: url(../images/illustration-laptop-desktop.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 120%;
+                height: 600px;
+                max-width: 600px;
+                margin-left: -160px;
+                flex: 2;
+                margin-top: 40px;
+
+                @media screen and (min-width:1200px) {
+                    margin-top: 90px;
+                }
+
+
+            }
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                justify-content: center;
+                flex: 1;
+                margin-top: 60px;
+
+                .body {
+                    max-width: 500px;
+                }
+
+            }
+        }
+    }
 }
