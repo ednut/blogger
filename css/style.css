@@ -73,7 +73,8 @@ a {
 }
 
 .banner {
-  height: 70vh;
+  max-height: 60vh;
+  padding-bottom: 100px;
   width: 100%;
   border-radius: 0 0 0 100px;
   background: #ff7e66;
@@ -85,7 +86,7 @@ a {
 }
 @media (max-width: 991px) {
   .banner {
-    height: 70vh;
+    max-height: 50vh;
     background-size: 310%;
     background-position: 33% 35%;
     background-image: url("../images/bg-pattern-intro-mobile.svg");
@@ -152,7 +153,7 @@ a {
 .banner .banner-content .title {
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
 }
 @media (max-width: 991px) {
   .banner .banner-content .title {
@@ -161,7 +162,7 @@ a {
 }
 .banner .banner-content .caption {
   color: #fee5df;
-  margin: 3rem 0 3rem 0;
+  margin: 1rem 0 3rem 0;
 }
 .banner .banner-content .button-wrap {
   display: flex;
@@ -175,7 +176,7 @@ a {
 .theFuture .heading {
   color: hsl(237deg, 17%, 21%);
   font-size: clamp(1.6rem, 2.5vw, 2.5rem);
-  margin: 3rem 0;
+  margin: 4rem 0;
   width: 100%;
   text-align: center;
 }
@@ -200,7 +201,7 @@ a {
 }
 .theFuture .sections .img-wrap {
   position: relative;
-  width: 40%;
+  width: 100vw;
 }
 .theFuture .sections .img-wrap img {
   width: 54rem;
@@ -211,7 +212,7 @@ a {
 @media (max-width: 991px) {
   .theFuture .sections .img-wrap {
     height: 100%;
-    width: 100%;
+    width: fi;
   }
   .theFuture .sections .img-wrap img {
     width: 100%;
@@ -241,6 +242,11 @@ a {
   .theFuture .sections .desc p {
     padding-right: 0;
   }
+  .theFuture .sections .desc p .robustBody {
+    padding-right: 0;
+    margin-bottom: 180px;
+    border: 1px solid red;
+  }
 }
 @media (max-width: 991px) {
   .theFuture .sections {
@@ -261,16 +267,16 @@ a {
 }
 .adsContainer .image {
   position: absolute;
-  top: -100px;
+  top: -280px;
   left: 0px;
   right: 0;
   z-index: 80;
   max-width: 100vw;
-  margin: auto;
+  margin-top: 150px;
+  border: 1px solid red;
 }
 .adsContainer .image img {
-  max-width: 70%;
-  margin-left: 30px;
+  max-width: 100%;
 }
 @media screen and (min-width: 750px) {
   .adsContainer .image img {
@@ -297,7 +303,7 @@ a {
   padding-bottom: 30px;
 }
 .adsContainer .ads .desc .heading {
-  margin-top: 70%;
+  margin-top: 320px;
 }
 @media screen and (min-width: 750px) {
   .adsContainer .ads {
