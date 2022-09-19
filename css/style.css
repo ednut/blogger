@@ -86,7 +86,7 @@ a {
 }
 @media (max-width: 991px) {
   .banner {
-    max-height: 50vh;
+    max-height: 60vh;
     background-size: 310%;
     background-position: 33% 35%;
     background-image: url("../images/bg-pattern-intro-mobile.svg");
@@ -264,6 +264,10 @@ a {
 .adsContainer {
   position: relative;
   margin-top: 150px;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 10;
 }
 .adsContainer .image {
   position: absolute;
@@ -274,9 +278,11 @@ a {
   max-width: 100vw;
   margin-top: 150px;
   border: 1px solid red;
+  display: flex;
 }
 .adsContainer .image img {
   max-width: 100%;
+  margin: auto;
 }
 @media screen and (min-width: 750px) {
   .adsContainer .image img {
@@ -291,11 +297,10 @@ a {
 }
 .adsContainer .ads {
   background-color: hsl(237deg, 17%, 21%);
-  max-height: 80vh;
+  min-height: 30vh;
   text-align: center;
   color: white;
   position: relative;
-  padding-bottom: 40px;
   border-top-right-radius: 60px;
   border-bottom-left-radius: 60px;
 }
@@ -303,9 +308,9 @@ a {
   padding-bottom: 30px;
 }
 .adsContainer .ads .desc .heading {
-  margin-top: 320px;
+  margin-top: 300px;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
   .adsContainer .ads {
     height: 23vh;
     display: flex;
@@ -314,12 +319,12 @@ a {
     padding-bottom: 0px;
   }
 }
-@media screen and (min-width: 750px) and (min-width: 920px) {
+@media screen and (min-width: 900px) and (min-width: 920px) {
   .adsContainer .ads {
     height: 37vh;
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
   .adsContainer .ads .desc {
     max-width: 450px;
     text-align: left;
@@ -327,13 +332,13 @@ a {
     padding-top: 30px;
   }
 }
-@media screen and (min-width: 750px) and (min-width: 920px) {
+@media screen and (min-width: 900px) and (min-width: 920px) {
   .adsContainer .ads .desc {
     max-width: 500px;
     transform: scale(1);
   }
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
   .adsContainer .ads .desc .heading {
     margin-top: 20px;
     margin-bottom: -10px;
