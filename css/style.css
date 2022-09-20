@@ -172,8 +172,7 @@ a {
 
 .theFuture {
   min-height: 100vh;
-  border: 1px solid red;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 .theFuture .heading {
   color: hsl(237deg, 17%, 21%);
@@ -184,7 +183,6 @@ a {
 }
 .theFuture .sections {
   display: flex;
-  justify-content: space-between;
   position: relative;
 }
 .theFuture .sections .heading {
@@ -206,27 +204,27 @@ a {
   width: 100vw;
 }
 .theFuture .sections .img-wrap img {
-  width: 54rem;
+  width: 45rem;
   position: absolute;
-  top: -60px;
+  top: -150px;
   right: -24rem;
 }
 @media (max-width: 991px) {
   .theFuture .sections .img-wrap {
     height: 100%;
-    width: fi;
   }
   .theFuture .sections .img-wrap img {
     width: 100%;
     height: 100%;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     top: 0;
     right: 0;
   }
 }
 .theFuture .sections .desc {
-  width: 60%;
+  min-width: 200px;
+  padding-top: 50px;
 }
 .theFuture .sections .desc p {
   padding-right: 5rem;
@@ -269,20 +267,35 @@ a {
   border: 1px solid green;
   display: flex;
   flex-direction: column;
-  max-width: 100vw;
+  justify-content: center;
+  margin-top: 260px;
 }
-.adsContainer .image {
-  border: 1px solid blue;
+.adsContainer .desc {
+  padding: 0 40px;
 }
 .adsContainer .image img {
   max-width: 100%;
-  position: absolute;
-  top: -150px;
-  border: 1px solid green;
-  display: flex;
+  margin-top: -400px;
 }
-.adsContainer .desc {
-  margin-top: 50px;
+@media screen and (min-width: 850px) {
+  .adsContainer {
+    flex-direction: row;
+    padding: 0 60px;
+    max-height: 35vh;
+    align-items: center;
+    margin-top: 10px;
+    background-size: 60%;
+  }
+  .adsContainer .desc {
+    padding: 0px;
+    text-align: left;
+    max-width: 450px;
+    margin-left: 70px;
+  }
+  .adsContainer .image img {
+    max-width: 310px;
+    margin-top: 27px;
+  }
 }
 
 .tooling {
@@ -297,13 +310,14 @@ a {
   background-position: center;
   background-size: cover;
   height: 270px;
-  max-width: 600px;
+  max-width: 800px;
   min-width: 280px;
   margin: 70px 0 40px 0;
   margin-inline: auto;
 }
 .tooling .desc {
   height: 600px;
+  padding: 0 30px;
 }
 .tooling .desc .body {
   color: hsl(207deg, 13%, 34%);
@@ -324,17 +338,14 @@ a {
     flex-direction: row;
     padding: 30px 0;
   }
-  .tooling .container {
-    padding: 0 7rem;
-  }
   .tooling .laptop {
     background-image: url(../images/illustration-laptop-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 120%;
-    height: 600px;
+    background-size: 140%;
+    min-height: 700px;
     max-width: 600px;
-    margin-left: -160px;
+    margin-left: -120px;
     flex: 2;
     margin-top: 40px;
   }
@@ -350,10 +361,14 @@ a {
     flex-direction: column;
     text-align: left;
     justify-content: center;
-    flex: 1;
     margin-top: 60px;
+    flex: 1;
+    padding: 0 180px;
   }
   .tooling .desc .body {
     max-width: 500px;
+  }
+  .tooling .desc .container {
+    padding: 0 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
