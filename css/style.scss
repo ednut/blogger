@@ -94,7 +94,7 @@ li{
 }
 
 .banner {
-    max-height: 60vh;
+    max-height: 70vh;
     padding-bottom: 100px;
     width: 100%;
     border-radius: 0 0 0 100px;
@@ -106,7 +106,7 @@ li{
     background-position: 24% 52%;
 
     @media (max-width: 991px) {
-        max-height: 60vh;
+        max-height: 90vh;
         background-size: 310%;
         background-position: 33% 35%;
         background-image: url('../images/bg-pattern-intro-mobile.svg');
@@ -129,6 +129,8 @@ li{
                 margin-right: 7rem;
                 color: white;
             }
+
+           
         }
 
         .right-section {
@@ -200,6 +202,18 @@ li{
         }
     }
 }
+
+.MenuItems{
+    background-color: white;
+    padding: 80px;
+    margin-top: 50px;
+    a{
+        color: black;
+    }
+   
+}
+
+
 
 .theFuture {
     min-height: 100vh;
@@ -509,6 +523,8 @@ li{
 
 p{
    margin-bottom: 20px;
+   font-size: 1.4rem;
+   font-weight: bold;
 }
     .navs{
         display: flex;
@@ -538,7 +554,8 @@ p{
     @media screen and (min-width:950px){
         flex-direction: row;
         align-items: flex-start;
-        gap: 120px;        
+        gap: 120px;
+        
         
         .navs{
         flex-direction: row;
