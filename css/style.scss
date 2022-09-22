@@ -26,7 +26,7 @@ $VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
 .container {
     padding: 0 10rem;
     overflow: hidden;
-
+   
     @media (max-width: 991px) {
         padding: 0 3rem;
     }
@@ -95,6 +95,7 @@ li{
 
 .banner {
     max-height: 70vh;
+    position: relative;
     padding-bottom: 100px;
     width: 100%;
     border-radius: 0 0 0 100px;
@@ -118,7 +119,7 @@ li{
         justify-content: space-between;
         font-family: 'Ubuntu', sans-serif;
         padding-top: 3rem;
-        position: relative;
+        
 
         .left-section {
             display: flex;
@@ -128,6 +129,7 @@ li{
                 font-size: 3rem;
                 margin-right: 7rem;
                 color: white;
+              
             }
 
            
@@ -145,7 +147,7 @@ li{
             li {
                 display: inline-block;
                 color: white;
-                margin-right: 3rem;
+                margin-right: 3rem;               
 
                 &:last-child {
                     margin-right: 0
@@ -155,7 +157,37 @@ li{
                     margin-right: 0;
                 }
             }
+
+            li.item{
+                position: relative;
+                &::after{
+                    content: '';
+                    background-image: url(../images/icon-arrow-light.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    display: inline-block;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    position: absolute;
+                    top: 35%;
+                    right: -21px;
+
+                    @media screen and (max-width:991px){
+                        background-image: url(../images/icon-arrow-dark.svg);
+                   
+                    }
+
+
+                    }
+
+                    &:nth-child(5){
+                       color: black;
+                    }
+
+              
+            }
         }
+        
 
         .menu {
             background-color: white;
@@ -203,17 +235,44 @@ li{
     }
 }
 
+@media (max-width: 991px) {
 .MenuItems{
+    display: block;
     background-color: white;
-    padding: 80px;
+    padding: 40px 0;
     margin-top: 50px;
+    width: 80vw;
+    height: 50vh;
+    position: absolute;
+    margin-inline: auto;
+    margin-inline: auto;
+    left: 10px;
+    right: 10px;
+    top: 90px;
+    border-radius: 10px;
+    bottom:0;
+    z-index: 50;
+
+    .menuList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    li{
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+    }
+   
     a{
         color: black;
+        
     }
    
 }
 
-
+}
 
 .theFuture {
     min-height: 100vh;

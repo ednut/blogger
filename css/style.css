@@ -78,6 +78,7 @@ li {
 
 .banner {
   max-height: 70vh;
+  position: relative;
   padding-bottom: 100px;
   width: 100%;
   border-radius: 0 0 0 100px;
@@ -102,7 +103,6 @@ li {
   justify-content: space-between;
   font-family: "Ubuntu", sans-serif;
   padding-top: 3rem;
-  position: relative;
 }
 .banner header .left-section {
   display: flex;
@@ -131,6 +131,29 @@ li {
 }
 .banner header ul li.mr-0 {
   margin-right: 0;
+}
+.banner header ul li.item {
+  position: relative;
+}
+.banner header ul li.item::after {
+  content: "";
+  background-image: url(../images/icon-arrow-light.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  top: 35%;
+  right: -21px;
+}
+@media screen and (max-width: 991px) {
+  .banner header ul li.item::after {
+    background-image: url(../images/icon-arrow-dark.svg);
+  }
+}
+.banner header ul li.item:nth-child(5) {
+  color: black;
 }
 .banner header .menu {
   background-color: white;
@@ -174,15 +197,38 @@ li {
   gap: 2rem;
 }
 
-.MenuItems {
-  background-color: white;
-  padding: 80px;
-  margin-top: 50px;
+@media (max-width: 991px) {
+  .MenuItems {
+    display: block;
+    background-color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+    width: 80vw;
+    height: 50vh;
+    position: absolute;
+    margin-inline: auto;
+    margin-inline: auto;
+    left: 10px;
+    right: 10px;
+    top: 90px;
+    border-radius: 10px;
+    bottom: 0;
+    z-index: 50;
+  }
+  .MenuItems .menuList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .MenuItems .menuList li {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+  .MenuItems a {
+    color: black;
+  }
 }
-.MenuItems a {
-  color: black;
-}
-
 .theFuture {
   min-height: 100vh;
   padding-bottom: 50px;
