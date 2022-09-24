@@ -6,12 +6,17 @@ body {
 }
 
 .container {
-  padding: 0 10rem;
+  padding: 0 5rem;
   overflow: hidden;
 }
 @media (max-width: 991px) {
   .container {
     padding: 0 3rem;
+  }
+}
+@media (min-width: 1300px) {
+  .container {
+    padding: 0 10rem;
   }
 }
 
@@ -102,14 +107,24 @@ li {
   display: flex;
   justify-content: space-between;
   font-family: "Ubuntu", sans-serif;
-  padding-top: 3rem;
+  padding: 2rem 10rem;
+}
+@media (max-width: 991px) {
+  .banner header {
+    padding: 1rem 3rem;
+  }
+}
+@media (min-width: 1px) {
+  .banner header {
+    padding: 2rem 3rem;
+  }
 }
 .banner header .left-section {
   display: flex;
   align-items: center;
 }
 .banner header .left-section .logo {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-right: 7rem;
   color: white;
 }
@@ -132,10 +147,15 @@ li {
 .banner header ul li.mr-0 {
   margin-right: 0;
 }
-.banner header ul li.item {
+.banner header ul .item > a {
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-.banner header ul li.item::after {
+.banner header ul .item > a::after {
   content: "";
   background-image: url(../images/icon-arrow-light.svg);
   background-repeat: no-repeat;
@@ -148,11 +168,11 @@ li {
   right: -21px;
 }
 @media screen and (max-width: 991px) {
-  .banner header ul li.item::after {
+  .banner header ul .item > a::after {
     background-image: url(../images/icon-arrow-dark.svg);
   }
 }
-.banner header ul li.item:nth-child(5) {
+.banner header ul .item > a:nth-child(5) {
   color: black;
 }
 .banner header .menu {
@@ -200,16 +220,44 @@ li {
 .item:last-child {
   position: relative;
 }
+@media screen and (max-width: 992px) {
+  .item:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .item:last-child .subItem {
-  background-color: yellow;
+  background-color: rgba(128, 128, 128, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: absolute;
-  top: 25px;
-  height: 600px;
-  z-index: 5000;
+  padding-top: 35px;
+  border-radius: 6px;
+  top: 30px;
+  width: 250px;
+}
+@media screen and (min-width: 992px) {
+  .item:last-child .subItem {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100px;
+  }
+  .item:last-child .subItem li {
+    color: hsl(207deg, 13%, 34%);
+    margin-bottom: 10px;
+  }
+  .item:last-child .subItem li:last-child {
+    margin-bottom: 0;
+  }
+  .item:last-child .subItem li :hover {
+    color: black;
+  }
 }
 
 @media (max-width: 991px) {
@@ -235,6 +283,7 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
   .MenuItems .menuList li {
     margin-right: 0rem;
@@ -279,7 +328,7 @@ li {
   width: 100vw;
 }
 .theFuture .sections .img-wrap img {
-  width: 50rem;
+  width: 45rem;
   position: absolute;
   top: -150px;
   right: -28rem;
@@ -299,7 +348,7 @@ li {
 }
 @media (min-width: 1300px) {
   .theFuture .sections .img-wrap img {
-    width: 65rem;
+    width: 50rem;
     position: absolute;
     top: -150px;
     right: -28rem;
@@ -329,9 +378,9 @@ li {
 @media (min-width: 1300px) {
   .theFuture .sections .desc {
     max-width: 550px;
-    padding-top: 150px;
-    padding-left: 120px;
-    transform: scale(1.4);
+    padding-top: 5%;
+    padding-left: 4%;
+    transform: scale(1);
   }
 }
 @media (max-width: 991px) {
@@ -402,8 +451,8 @@ li {
     margin-top: 27px;
   }
   .adsContainer .desc {
-    transform: scale(1.3);
-    margin-left: 210px;
+    transform: scale(1.2);
+    margin-left: 160px;
     line-height: 1.5rem;
     max-width: 500px;
   }
@@ -482,17 +531,26 @@ li {
     flex: 1;
     padding: 0 130px;
   }
+}
+@media screen and (min-width: 850px) and (min-width: 850px) {
+  .tooling .desc {
+    padding: 0 120px;
+  }
+}
+@media screen and (min-width: 850px) {
   .tooling .desc .body {
     max-width: 500px;
   }
+}
+@media screen and (min-width: 850px) {
   .tooling .desc .container {
     padding: 0 1rem;
   }
 }
 @media screen and (min-width: 850px) and (min-width: 1300px) {
   .tooling .desc {
-    transform: scale(1.2);
-    margin-top: 200px;
+    transform: scale(1);
+    margin-top: 100px;
     margin-left: 190px;
   }
   .tooling .desc .body {
@@ -536,7 +594,7 @@ li {
   padding: 0;
 }
 .footer .logo {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 @media screen and (min-width: 950px) {
@@ -548,7 +606,7 @@ li {
   .footer .navs {
     flex-direction: row;
     align-items: flex-start;
-    gap: 190px;
+    gap: 110px;
     text-align: left;
     font-size: 1rem;
   }
@@ -558,6 +616,6 @@ li {
     gap: 340px;
   }
   .footer .navs {
-    gap: 290px;
+    gap: 220px;
   }
 }/*# sourceMappingURL=style.css.map */
